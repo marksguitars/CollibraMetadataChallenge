@@ -3,7 +3,6 @@ package com.collibra.codingchallenge.demo.services;
 import com.collibra.codingchallenge.demo.Asset;
 import com.collibra.codingchallenge.demo.AssetNotFoundException;
 import com.collibra.codingchallenge.demo.AssetRepository;
-import com.collibra.codingchallenge.demo.controllers.AssetController;
 import java.util.List;
 import java.util.Optional;
 import lombok.AllArgsConstructor;
