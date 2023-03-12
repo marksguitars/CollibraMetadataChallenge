@@ -1,0 +1,38 @@
+version: "3.8"
+services:
+  message-server:
+    container_name: metadata-application
+    build:
+      context: docker-metadata-application
+      dockerfile: Dockerfile
+    image: metadata-application:latest
+    ports:
+      - 8080:8080
+    networks:
+      - spring-cloud-network
+  mongodb:
+    image: mongo
+    container_name: mongodbcallibra
+    ports:
+      - 27017:27017
+    volumes:
+      - data:/data
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=callibra
+      - MONGO_INITDB_ROOT_PASSWORD=password
+  mongo-express:
+    image: mongo-express
+    container_name: mongo-express
+    restart: always
+    ports:
+      - 8081:8081
+    environment:
+      - ME_CONFIG_MONGODB_ADMINUSERNAME=callibra
+      - ME_CONFIG_MONGODB_ADMINPASSWORD=password
+      - ME_CONFIG_MONGODB_SERVER=mongodb
+volumes:
+  data: {}
+
+networks:
+  default:
+    name: mongodb_network

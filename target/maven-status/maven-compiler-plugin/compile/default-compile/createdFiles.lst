@@ -1,0 +1,9 @@
+com/collibra/codingchallenge/demo/config/KafkaProducerConfig.class
+com/collibra/codingchallenge/demo/AssetType.class
+com/collibra/codingchallenge/demo/MetadataApplication.class
+com/collibra/codingchallenge/demo/services/AssetService.class
+com/collibra/codingchallenge/demo/controllers/AssetController.class
+com/collibra/codingchallenge/demo/config/KafkaTopicConfig.class
+com/collibra/codingchallenge/demo/AssetNotFoundException.class
+com/collibra/codingchallenge/demo/Asset.class
+com/collibra/codingchallenge/demo/AssetRepository.class
